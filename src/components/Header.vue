@@ -4,29 +4,29 @@
   >
     <div class="container px-5 mx-auto xl:px-0">
       <div class="hidden justify-between items-center md:flex">
-        <a href="/" class="flex gap-2 justify-start items-center">
+        <router-link to="//" class="flex gap-2 justify-start items-center">
           <img src="/img/logo.svg" alt="logo" />
           <span class="text-xl font-medium text-w-900">Neurolinx</span>
-        </a>
+        </router-link>
         <nav>
           <ul class="flex justify-center items-center md:gap-4 lg:gap-8">
             <li class="relative group">
-              <a
-                href="/"
+              <router-link
+                to="/"
                 class="inline-block text-sm font-semibold capitalize transition-all duration-300 text-w-100 hover:text-w-900"
-                >home</a
+                >home</router-link
               >
             </li>
             <li class="relative group">
-              <a
-                href="solution.html"
+              <router-link
+                to="/solution"
                 class="inline-block text-sm font-semibold capitalize transition-all duration-300 text-w-100 hover:text-w-900"
-                >solutions</a
+                >solutions</router-link
               >
             </li>
             <li class="relative cursor-pointer nav-item group">
-              <a
-                href="#"
+              <router-link
+                to="/#"
                 class="flex gap-2 items-center text-sm font-semibold capitalize transition-all duration-300 text-w-100"
               >
                 resources
@@ -43,7 +43,7 @@
                     d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
                   />
                 </svg>
-              </a>
+              </router-link>
               <!-- Resources Mega Menu -->
               <div
                 class="absolute left-1/2 transform -translate-x-1/2 hidden mt-9 w-[630px] rounded-lg shadow-lg bg-b-700 border border-b-500 group-hover:flex top-full"
@@ -59,7 +59,7 @@
                   </div>
                   <!-- Right Section -->
                   <div class="p-6 w-1/2">
-                    <a href="blog.html">
+                    <router-link to="/blog">
                       <div
                         class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                       >
@@ -77,8 +77,8 @@
                           </span>
                         </div>
                       </div>
-                    </a>
-                    <a href="case-studies.html">
+                    </router-link>
+                    <router-link to="/caseStudies">
                       <div
                         class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                       >
@@ -98,8 +98,8 @@
                           </span>
                         </div>
                       </div>
-                    </a>
-                    <a href="documentation.html">
+                    </router-link>
+                    <router-link to="/Document">
                       <div
                         class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                       >
@@ -119,14 +119,14 @@
                           </span>
                         </div>
                       </div>
-                    </a>
+                    </router-link>
                   </div>
                 </div>
               </div>
             </li>
             <li class="relative cursor-pointer group nav-item">
-              <a
-                href="#"
+              <router-link
+                to="/#"
                 class="flex gap-2 items-center text-sm font-semibold capitalize transition-all duration-300 text-w-100"
               >
                 Company
@@ -143,7 +143,7 @@
                     d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
                   />
                 </svg>
-              </a>
+              </router-link>
               <!-- company Mega Menu -->
               <div
                 class="absolute left-1/2 transform -translate-x-1/2 hidden mt-9 w-[630px] rounded-lg shadow-lg bg-b-700 border border-b-500 group-hover:flex top-full"
@@ -160,7 +160,7 @@
 
                   <!-- Right Section -->
                   <div class="p-6 w-1/2">
-                    <a href="story.html">
+                    <router-link to="/OurStory">
                       <div
                         class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                       >
@@ -180,8 +180,8 @@
                           </span>
                         </div>
                       </div>
-                    </a>
-                    <a href="team.html">
+                    </router-link>
+                    <router-link to="/OurTeam">
                       <div
                         class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                       >
@@ -201,8 +201,8 @@
                           </span>
                         </div>
                       </div>
-                    </a>
-                    <a href="service.html">
+                    </router-link>
+                    <router-link to="/OurService">
                       <div
                         class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                       >
@@ -222,8 +222,8 @@
                           </span>
                         </div>
                       </div>
-                    </a>
-                    <a href="patent.html">
+                    </router-link>
+                    <router-link to="/OurPatent">
                       <div
                         class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                       >
@@ -243,8 +243,8 @@
                           </span>
                         </div>
                       </div>
-                    </a>
-                    <a href="media-kit.html">
+                    </router-link>
+                    <router-link to="/media">
                       <div
                         class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                       >
@@ -264,7 +264,7 @@
                           </span>
                         </div>
                       </div>
-                    </a>
+                    </router-link>
                   </div>
                 </div>
               </div>
@@ -272,15 +272,15 @@
           </ul>
         </nav>
         <div class="flex gap-2 justify-end items-center">
-          <a
-            href="sign-in.html"
+          <router-link
+            to="/sign-in"
             class="inline-block px-4 py-2 text-sm font-medium capitalize bg-transparent rounded-full border border-transparent transition-all duration-300 text-w-900"
-            >sign in</a
+            >sign in</router-link
           >
-          <a
-            href="sign-up.html"
+          <router-link
+            to="/sign-up"
             class="inline-block px-4 py-2 text-sm font-medium capitalize rounded-full border transition-all duration-300 btn-border bg-gd-secondary hover:bg-transparent text-w-900"
-            >sign up</a
+            >sign up</router-link
           >
         </div>
       </div>
@@ -289,10 +289,10 @@
       <div
         class="container flex justify-between items-center px-5 mx-auto xl:px-0"
       >
-        <a href="/" class="flex gap-2">
+        <router-link to="//" class="flex gap-2">
           <img src="/img/logo.svg" alt="logo" />
           <span class="text-xl font-medium text-w-900">Neurolinx</span>
-        </a>
+        </router-link>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           @click="toggleMenu()"
@@ -314,22 +314,22 @@
         <nav>
           <ul class="flex flex-col gap-4 justify-start items-start">
             <li>
-              <a
-                href="/"
+              <router-link
+                to="//"
                 class="inline-block text-sm font-semibold capitalize transition-all duration-300 text-w-100 hover:text-w-900"
-                >home</a
+                >home</router-link
               >
             </li>
             <li>
-              <a
-                href="solution.html"
+              <router-link
+                to="/solution"
                 class="inline-block text-sm font-semibold capitalize transition-all duration-300 text-w-100 hover:text-w-900"
-                >solutions</a
+                >solutions</router-link
               >
             </li>
             <li>
-              <a
-                href="#"
+              <router-link
+                to="/#"
                 class="flex gap-1 items-center text-sm font-semibold capitalize transition-all duration-300 text-w-100 hover:text-w-900"
                 @click="toggleSubMenu('resources')"
                 >resources
@@ -346,10 +346,10 @@
                     d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
                   />
                 </svg>
-              </a>
+              </router-link>
 
               <ul id="resources-menu" class="hidden flex-col gap-2 mt-2">
-                <a href="blog.html">
+                <router-link to="/blog">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -367,8 +367,8 @@
                       </span>
                     </div>
                   </div>
-                </a>
-                <a href="case-studies.html">
+                </router-link>
+                <router-link to="/CaseStudiesView.vue">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -388,8 +388,8 @@
                       </span>
                     </div>
                   </div>
-                </a>
-                <a href="documentation.html">
+                </router-link>
+                <router-link to="/Document">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -409,12 +409,12 @@
                       </span>
                     </div>
                   </div>
-                </a>
+                </router-link>
               </ul>
             </li>
             <li>
-              <a
-                href="#"
+              <router-link
+                to="/#"
                 class="flex gap-1 items-center text-sm font-semibold capitalize transition-all duration-300 text-w-100 hover:text-w-900"
                 @click="toggleSubMenu('company')"
                 >company
@@ -431,9 +431,9 @@
                     d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
                   />
                 </svg>
-              </a>
+              </router-link>
               <ul id="company-menu" class="hidden flex-col gap-2 mt-2">
-                <a href="story.html">
+                <router-link to="/story">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -451,8 +451,8 @@
                       </span>
                     </div>
                   </div>
-                </a>
-                <a href="team.html">
+                </router-link>
+                <router-link to="/team">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -470,8 +470,8 @@
                       </span>
                     </div>
                   </div>
-                </a>
-                <a href="service.html">
+                </router-link>
+                <router-link to="/service">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -491,8 +491,8 @@
                       </span>
                     </div>
                   </div>
-                </a>
-                <a href="patent.html">
+                </router-link>
+                <router-link to="/patent">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -512,8 +512,8 @@
                       </span>
                     </div>
                   </div>
-                </a>
-                <a href="media-kit.html">
+                </router-link>
+                <router-link to="/media-kit">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -531,21 +531,21 @@
                       </span>
                     </div>
                   </div>
-                </a>
+                </router-link>
               </ul>
             </li>
           </ul>
         </nav>
         <div class="flex gap-2 items-center mt-8">
-          <a
-            href="sign-in.html"
+          <router-link
+            to="/sign-in"
             class="inline-block px-4 py-2 rounded-full border border-w-500 hover:border-tropical-indigo border-opacity-[8%] capitalize text-sm font-medium bg-transparent hover:bg-gd-secondary text-w-900 transition-all duration-300"
-            >sign in</a
+            >sign in</router-link
           >
-          <a
-            href="sign-up.html"
+          <router-link
+            to="/sign-up"
             class="inline-block px-4 py-2 rounded-full border border-tropical-indigo hover:border-transparent border-opacity-[8%] capitalize text-sm font-medium bg-gd-secondary hover:bg-transparent text-w-900 transition-all duration-300"
-            >sign up</a
+            >sign up</router-link
           >
         </div>
         <svg

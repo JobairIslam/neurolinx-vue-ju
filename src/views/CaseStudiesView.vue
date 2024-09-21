@@ -1,5 +1,5 @@
 <script setup>
-import Getstart from '../components/Getstart.vue';
+import Getstart from "../components/Getstart.vue";
 </script>
 
 <template>

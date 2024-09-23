@@ -315,14 +315,14 @@
           <ul class="flex flex-col gap-4 justify-start items-start">
             <li>
               <router-link
-                to="//"
+                to="/"
                 class="inline-block text-sm font-semibold capitalize transition-all duration-300 text-w-100 hover:text-w-900"
                 >home</router-link
               >
             </li>
             <li>
               <router-link
-                to="/solution"
+                to="/Solution"
                 class="inline-block text-sm font-semibold capitalize transition-all duration-300 text-w-100 hover:text-w-900"
                 >solutions</router-link
               >
@@ -349,7 +349,7 @@
               </router-link>
 
               <ul id="resources-menu" class="hidden flex-col gap-2 mt-2">
-                <router-link to="/blog">
+                <router-link to="/Blog">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -368,7 +368,7 @@
                     </div>
                   </div>
                 </router-link>
-                <router-link to="/CaseStudiesView.vue">
+                <router-link to="/CaseStudies">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -433,7 +433,7 @@
                 </svg>
               </router-link>
               <ul id="company-menu" class="hidden flex-col gap-2 mt-2">
-                <router-link to="/story">
+                <router-link to="/OurStory">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -452,7 +452,7 @@
                     </div>
                   </div>
                 </router-link>
-                <router-link to="/team">
+                <router-link to="/OurTeam">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -471,7 +471,7 @@
                     </div>
                   </div>
                 </router-link>
-                <router-link to="/service">
+                <router-link to="/OurService">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -492,7 +492,7 @@
                     </div>
                   </div>
                 </router-link>
-                <router-link to="/patent">
+                <router-link to="/OurPatents">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -569,47 +569,79 @@
 <script>
 export default {
   methods: {
+    // Toggle mobile menu visibility
     toggleMenu() {
       const menu = document.getElementById("mobile-menu");
       menu.classList.toggle("hidden");
     },
 
+    // Mega menu for phone: toggle between Resources and Company
     toggleSubMenu(menu) {
       const resourcesMenu = document.getElementById("resources-menu");
       const companyMenu = document.getElementById("company-menu");
 
+      // If "Resources" is clicked
       if (menu === "resources") {
-        companyMenu.classList.add("hidden");
-        companyMenu.previousElementSibling
-          .querySelector("svg")
-          .classList.remove("rotate-180");
+        // Close the company menu if it's open
+        if (!companyMenu.classList.contains("hidden")) {
+          companyMenu.classList.add("hidden");
+          const companyArrow =
+            companyMenu.previousElementSibling.querySelector("svg");
+          if (companyArrow) {
+            companyArrow.classList.remove("rotate-180");
+          }
+        }
 
+        // Toggle the resources menu
         resourcesMenu.classList.toggle("hidden");
         const resourcesArrow =
           resourcesMenu.previousElementSibling.querySelector("svg");
-        resourcesArrow.classList.toggle("rotate-180");
-      } else if (menu === "company") {
-        resourcesMenu.classList.add("hidden");
-        resourcesMenu.previousElementSibling
-          .querySelector("svg")
-          .classList.remove("rotate-180");
+        if (resourcesArrow) {
+          resourcesArrow.classList.toggle("rotate-180");
+        }
+      }
+      // If "Company" is clicked
+      else if (menu === "company") {
+        // Close the resources menu if it's open
+        if (!resourcesMenu.classList.contains("hidden")) {
+          resourcesMenu.classList.add("hidden");
+          const resourcesArrow =
+            resourcesMenu.previousElementSibling.querySelector("svg");
+          if (resourcesArrow) {
+            resourcesArrow.classList.remove("rotate-180");
+          }
+        }
 
+        // Toggle the company menu
         companyMenu.classList.toggle("hidden");
         const companyArrow =
           companyMenu.previousElementSibling.querySelector("svg");
-        companyArrow.classList.toggle("rotate-180");
+        if (companyArrow) {
+          companyArrow.classList.toggle("rotate-180");
+        }
       }
     },
 
-    toggleMobileSubMenu(menuId) {
-      const menu = document.getElementById(`${menuId}-menu`);
-      const arrow = menu.previousElementSibling.querySelector("svg");
+    // Close the mobile menu when a mega menu link is clicked
+    hideMenuOnLinkClick() {
+      const menu = document.getElementById("mobile-menu");
 
-      menu.classList.toggle("hidden");
-      menu.classList.toggle("flex");
+      // Select all links inside the mega menus (Resources and Company)
+      const megaMenuLinks = document.querySelectorAll(
+        "#resources-menu a, #company-menu a"
+      );
 
-      arrow.classList.toggle("rotate-180");
+      megaMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden"); // Hide the mobile menu when clicking a mega menu link
+        });
+      });
     },
+  },
+
+  // Lifecycle hook to call the hideMenuOnLinkClick when the page loads
+  mounted() {
+    this.hideMenuOnLinkClick();
   },
 };
 </script>

@@ -351,7 +351,7 @@
               </router-link>
 
               <ul id="resources-menu" class="hidden flex-col gap-2 mt-2">
-                <router-link to="/Blog">
+                <router-link to="/Blog" @click="toggleMenu">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -370,7 +370,7 @@
                     </div>
                   </div>
                 </router-link>
-                <router-link to="/CaseStudies">
+                <router-link to="/CaseStudies" @click="toggleMenu">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -391,7 +391,7 @@
                     </div>
                   </div>
                 </router-link>
-                <router-link to="/Document">
+                <router-link to="/Document" @click="toggleMenu">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -435,7 +435,7 @@
                 </svg>
               </router-link>
               <ul id="company-menu" class="hidden flex-col gap-2 mt-2">
-                <router-link to="/OurStory">
+                <router-link to="/OurStory" @click="toggleMenu">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -454,7 +454,7 @@
                     </div>
                   </div>
                 </router-link>
-                <router-link to="/OurTeam">
+                <router-link to="/OurTeam" @click="toggleMenu">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -473,7 +473,7 @@
                     </div>
                   </div>
                 </router-link>
-                <router-link to="/OurService">
+                <router-link to="/OurService" @click="toggleMenu">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -494,7 +494,7 @@
                     </div>
                   </div>
                 </router-link>
-                <router-link to="/patent">
+                <router-link to="/patent" @click="toggleMenu">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -515,7 +515,7 @@
                     </div>
                   </div>
                 </router-link>
-                <router-link to="/media">
+                <router-link to="/media" @click="toggleMenu">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >

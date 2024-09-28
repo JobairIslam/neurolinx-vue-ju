@@ -223,7 +223,7 @@
                         </div>
                       </div>
                     </router-link>
-                    <router-link to="/OurPatent">
+                    <router-link to="/patent">
                       <div
                         class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                       >
@@ -317,6 +317,7 @@
               <router-link
                 to="/"
                 class="inline-block text-sm font-semibold capitalize transition-all duration-300 text-w-100 hover:text-w-900"
+                @click="toggleMenu"
                 >home</router-link
               >
             </li>
@@ -324,6 +325,7 @@
               <router-link
                 to="/Solution"
                 class="inline-block text-sm font-semibold capitalize transition-all duration-300 text-w-100 hover:text-w-900"
+                @click="toggleMenu"
                 >solutions</router-link
               >
             </li>
@@ -492,7 +494,7 @@
                     </div>
                   </div>
                 </router-link>
-                <router-link to="/OurPatents">
+                <router-link to="/patent">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -513,7 +515,7 @@
                     </div>
                   </div>
                 </router-link>
-                <router-link to="/media-kit">
+                <router-link to="/media">
                   <div
                     class="flex gap-2 items-center p-1 mb-1 rounded-lg hover:bg-b-500"
                   >
@@ -591,7 +593,6 @@ export default {
             companyArrow.classList.remove("rotate-180");
           }
         }
-
         // Toggle the resources menu
         resourcesMenu.classList.toggle("hidden");
         const resourcesArrow =
@@ -611,7 +612,6 @@ export default {
             resourcesArrow.classList.remove("rotate-180");
           }
         }
-
         // Toggle the company menu
         companyMenu.classList.toggle("hidden");
         const companyArrow =
@@ -622,18 +622,15 @@ export default {
       }
     },
 
-    // Close the mobile menu when a mega menu link is clicked
+    // Close the mobile menu when a navigation link is clicked
     hideMenuOnLinkClick() {
       const menu = document.getElementById("mobile-menu");
 
-      // Select all links inside the mega menus (Resources and Company)
-      const megaMenuLinks = document.querySelectorAll(
-        "#resources-menu a, #company-menu a"
-      );
-
-      megaMenuLinks.forEach((link) => {
+      // Hide mobile menu after clicking any navigation link
+      const navLinks = document.querySelectorAll("router-link");
+      navLinks.forEach((link) => {
         link.addEventListener("click", () => {
-          menu.classList.add("hidden"); // Hide the mobile menu when clicking a mega menu link
+          menu.classList.add("hidden");
         });
       });
     },
